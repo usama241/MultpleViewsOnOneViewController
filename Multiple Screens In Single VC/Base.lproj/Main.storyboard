@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SAq-bt-Wh6">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5wk-tk-eRO">
+            <objects>
+                <viewController id="SAq-bt-Wh6" customClass="ViewController" customModule="Multiple_Screens_In_Single_VC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jer-Dr-3nZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nw4-Ux-I3S">
+                                <rect key="frame" x="0.0" y="179" width="375" height="599"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YxE-sw-uJh">
+                                <rect key="frame" x="84" y="44" width="224" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="SegBtn:" destination="SAq-bt-Wh6" eventType="valueChanged" id="Iu9-5t-Goh"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fZ5-QX-IV1"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="fZ5-QX-IV1" firstAttribute="trailing" secondItem="YxE-sw-uJh" secondAttribute="trailing" constant="106" id="cdK-pB-7iA"/>
+                            <constraint firstItem="YxE-sw-uJh" firstAttribute="leading" secondItem="fZ5-QX-IV1" secondAttribute="leading" constant="84" id="dR4-K2-8xs"/>
+                            <constraint firstItem="YxE-sw-uJh" firstAttribute="top" secondItem="fZ5-QX-IV1" secondAttribute="top" id="kUF-u9-ax4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aGl-Rw-Ak9"/>
+                    <connections>
+                        <outlet property="SegOL" destination="YxE-sw-uJh" id="H6Y-eD-sgd"/>
+                        <outlet property="sideview" destination="nw4-Ux-I3S" id="5E4-KJ-cP1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pd3-Lx-EXo" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408.80000000000001" y="62.807881773399018"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
